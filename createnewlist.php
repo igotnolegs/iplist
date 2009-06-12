@@ -14,14 +14,14 @@
 			$i = -1;
 			$f = 255;
 		
-			$createipoct1 = 	$_POST['defipoct1'];
-			$createipoct2 = 	$_POST['defipoct2'];
-			$createipoct3 = 	$_POST['defipoct3'];
+			$createipoct1 = 	  $_POST['defipoct1'];
+			$createipoct2 = 	  $_POST['defipoct2'];
+			$createipoct3 = 	  $_POST['defipoct3'];
 			$createsubnetip = 	$_POST['defsubnetip'];
 			$createlisttitle = 	$_POST['deflisttitle'];
 			$createlistname = 	$_POST['deflistname'];
 		
-			echo '<title>Creating list ' . $createlisttitle . '</title>';
+			echo '<title>Creating list ' . $createlisttitle . '</title>\n';
 		
 			$query1="INSERT INTO IPListIndex (
 				IndexListID, 
@@ -56,9 +56,7 @@
 				");
 			}
 			mysql_close();
-			echo "DONE!";
+			echo "DONE!\n";
 			?>
 		</body>
 </html>
-		
-		
