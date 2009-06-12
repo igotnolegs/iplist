@@ -34,16 +34,16 @@
 		<?
 			while($row = mysql_fetch_array($result)) {
 				$alt_row = ((($i++ % 2) == 1) ? 'alt-one' : 'alt-two');
-				echo "<tr class="" . $alt_row . "">\n"
-          "\t<td width=\"135\">"
-					  . $row["IPListOct1"] . "."
-					  . $row["IPListOct2"] . "."
-					  . $row["IPListOct3"] . "."
-					  '<b>' . $row['IPListOct4'] . '</b></td>\n'
-          "\t<td width=\"50\">" . $row["IPListSNMask"] . "</td>\n"
-					"\t<td width=\"200\">" . $row["IPListCustname"] . "</td>\n"
-					"\t<td>" . $row["IPListTower"] . "</td>\n"
-					"\t<td>" . $row["IPListYDI"] . "</td>\n"
+				echo "<tr class=\"", $alt_row, "\">\n",
+          "\t<td width=\"135\">",
+					$row['IPListOct1'],  ".",
+					$row['IPListOct2'],  ".",
+					$row['IPListOct3'],  ".",
+					"<b>",$row['IPListOct4'], "</b></td>\n",
+          "\t<td width=\"50\">", $row['IPListSNMask'], "</td>\n",
+					"\t<td width=\"200\">", $row['IPListCustname'], "</td>\n",
+					"\t<td>", $row['IPListTower'], "</td>\n",
+					"\t<td>", $row['IPListYDI'], "</td>\n",
 				"</tr>\n";
 			}
 			echo "</table>\n";
