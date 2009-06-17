@@ -8,7 +8,7 @@
 		mysql_connect(localhost,$username,$password);
 		@mysql_select_db($database) or die("unable to connect to sql database");
 		$searchquery = $_GET['search'];
-		echo "<title>SCC IP LIST SEARCH:", $searchquery, "</title>\n";
+		echo "<title>SCC IP LIST SEARCH: ", $searchquery, "</title>\n";
 	?>
 	</head>
 	<body>
