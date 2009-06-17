@@ -48,7 +48,7 @@
 					"\t<td>", $row['IPListYDI'], "&nbsp</td>\n",
 				"</tr>\n";
 			}
-			echo "</table>";
+			echo "</table>\n";
 			mysql_close();
 		?>		
 <!-- -=-=-=-=-=IP ADDRESS TABLE ENDS HERE-=-=-=-=-= --!>
