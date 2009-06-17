@@ -31,7 +31,7 @@
 		  <td><b>Tower</b></td>
 		  <td><b>YDI</b></td>
 	  </tr>			
-<!-- -=-=-=-=-=IP ADDRESS TABLE STARTS HERE-=-=-=-=-= --!>
+<!-- -=-=-=-=-=IP ADDRESS TABLE STARTS HERE-=-=-=-=-= -->
    	<?			
 			while($row = mysql_fetch_array($result)) {
 				$alt_row = ((($i++ % 2) == 1) ? 'alt-one' : 'alt-two');
@@ -51,6 +51,6 @@
 			echo "</table>\n";
 			mysql_close();
 		?>		
-<!-- -=-=-=-=-=IP ADDRESS TABLE ENDS HERE-=-=-=-=-= --!>
+<!-- -=-=-=-=-=IP ADDRESS TABLE ENDS HERE-=-=-=-=-= -->
     </body>
 </html>
