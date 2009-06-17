@@ -7,16 +7,12 @@
 			@mysql_select_db($database) or die("unable to connect to sql database");
 		
 			$query = "SELECT * FROM IPListIndex"; 
-	 
 			$result = mysql_query($query) or die(mysql_error());
-
 		?>
 		<title>Manage SCC IP Lists</title>
 	</head>
 	<body>
-		<?
-			Print("<h1>Create New IP List</h1>");
-		?>
+		<h1>Create New IP List</h1>");
 		<form action = "createnewlist.php" method = "post">
 			<p>Default IP Octet 1:<input type="text" name="defipoct1"> (3 digit integer)<br>
 			Default IP Octet 2:<input type="text" name="defipoct2"> (3 digit integer)<br>
@@ -27,11 +23,11 @@
 		<input type="submit" value="Submit"></form>
 	
 		<?
-			Print("<h1>Delete IP List</h1>");
-			echo '<form name="deletelist" action="deletelist.php" method="post">
-			<select name="table">';
+			echo "<h1>Delete IP List</h1>\n";
+			echo "<form name=\"deletelist\" action=\"deletelist.php\" method=\"post\"\n>",
+			"<select name=\"table\">\n";
 			while($row = mysql_fetch_array($result)) {
-				echo '<option value="' . $row['IndexListID'] . '">' . $row['IndexListTitle'] . '</option>';
+				echo "\t<option value=\"", $row['IndexListID'], "\">", $row['IndexListTitle'], "</option>\n";
 			}
 			mysql_close();
 		?>

@@ -9,7 +9,7 @@
 		@mysql_select_db($database) or die("unable to connect to sql database");
 		$tableselection = $_GET['list'];
 		$header = mysql_fetch_array(mysql_query("SELECT * FROM IPListIndex WHERE IndexListID = '$tableselection'"));
-		echo "<title>SCC IP LIST:", $header[2], "</title>\n";
+		echo "<title>SCC IP LIST: ", $header[2], "</title>\n";
 	?>
 	</head>
 	<body>
@@ -31,7 +31,7 @@
       <td><b>Tower</b></td>
       <td><b>YDI</b></td>
 		</tr>
-<!-- -=-=-=-=-=IP ADDRESS TABLE STARTS HERE-=-=-=-=-= --!>
+<!-- _=_=_=_=_=IP ADDRESS TABLE STARTS HERE_=_=_=_=_= -->
 		<?
 			while($row = mysql_fetch_array($result)) {
 				$alt_row = ((($i++ % 2) == 1) ? 'alt-one' : 'alt-two');
@@ -40,16 +40,16 @@
 					$row['IPListOct1'],  ".",
 					$row['IPListOct2'],  ".",
 					$row['IPListOct3'],  ".",
-					"<b>", $row['IPListOct4'], "</b></td>\n",
-          "\t<td width=\"50\">", $row['IPListSNMask'], "</td>\n",
-					"\t<td width=\"200\">", $row['IPListCustname'], "</td>\n",
-					"\t<td>", $row['IPListTower'], "</td>\n",
-					"\t<td>", $row['IPListYDI'], "</td>\n",
+					"<b>", $row['IPListOct4'], "</b>&nbsp</td>\n",
+          "\t<td width=\"50\">", $row['IPListSNMask'], "&nbsp</td>\n",
+					"\t<td width=\"200\">", $row['IPListCustname'], "&nbsp</td>\n",
+					"\t<td>", $row['IPListTower'], "&nbsp</td>\n",
+					"\t<td>", $row['IPListYDI'], "&nbsp</td>\n",
 				"</tr>\n";
 			}
 			echo "</table>";
 			mysql_close();
 		?>		
-<!-- -=-=-=-=-=IP ADDRESS TABLE ENDS HERE-=-=-=-=-= --!>
+<!-- _=_=_=_=_=IP ADDRESS TABLE ENDS HERE_=_=_=_=_= -->
     </body>
 </html>
