@@ -17,7 +17,7 @@
 			"\t<form action=\"iplistsearchedit.php\" method=\"get\" name=\"search\">\n",
 				"\t\t<input type=\"hidden\" name=\"search\" VALUE=", $searchquery, ">\n",
 			"\t<input type=\"submit\" value=\"Edit search results\"></form>\n";
-			echo "\t<h2>Search results for ", $searchquery, "</h2><br>\n";
+			echo "\t<h2>Search results for \"", $searchquery, "\"</h2><br>\n";
 		
 			$query = "SELECT * FROM IPListItem WHERE IPListCustname LIKE '%$searchquery%' ORDER BY IPListID, IPListCustname"; 
 	 		$result = mysql_query($query) or die(mysql_error());
