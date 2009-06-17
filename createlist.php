@@ -35,7 +35,3 @@
 			<input type="submit" value="Delete List"></form>
 	</body>
 <html>
-
-		
-		
-		

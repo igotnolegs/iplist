@@ -41,11 +41,11 @@
 					$row['IPListOct1'], ".",
 					$row['IPListOct2'], ".",
 					$row['IPListOct3'], ".",
-			    "<b>", $row['IPListOct4'], "</b></td>\n",
-					"\t<td width=\"50\">", $row['IPListSNMask'], "</td>\n",
-					"\t<td width=\"135\">", $row['IPListCustname'], "</td>\n",
-					"\t<td>", $row['IPListTower'], "</td>\n",
-					"\t<td>", $row['IPListYDI'], "</td>\n",
+			    "<b>", $row['IPListOct4'], "&nbsp</b></td>\n",
+					"\t<td width=\"50\">", $row['IPListSNMask'], "&nbsp</td>\n",
+					"\t<td width=\"135\">", $row['IPListCustname'], "&nbsp</td>\n",
+					"\t<td>", $row['IPListTower'], "&nbsp</td>\n",
+					"\t<td>", $row['IPListYDI'], "&nbsp</td>\n",
 				"</tr>\n";
 			}
 			echo "</table>";

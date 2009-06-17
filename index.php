@@ -25,12 +25,14 @@
 				<td>
 					<form name="list" action="ipreadlist.php" method="get">
 					<select name="list">
-					<?
+<!--  -->					
+          <?
 						while($row = mysql_fetch_array($result)) {
-								echo '<option value="' . $row['IndexListID'] . '">' . $row['IndexListTitle'] . '</option>';
+								echo "\t\t\t\t\t<option value=\"", $row['IndexListID'], "\">", $row['IndexListTitle'], "</option>\n";
 						}
 						mysql_close();
 					?>
+<!-- -->
 					<input type="submit" value="Submit"></form></select>
 				</td>
 				<td>
